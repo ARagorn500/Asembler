@@ -82,3 +82,4 @@ dkms.conf
 **/obj
 
 
+*.layout
