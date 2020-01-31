@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1580503448 source:/home/blewis/git/Asembler/Circuits/main.cpp
+	<iostream>
+	"Circuit.h"
+
+1580503730 source:/home/blewis/git/Asembler/Circuits/src/Circuit.cpp
+	"Circuit.h"
+
+1580503720 /home/blewis/git/Asembler/Circuits/include/Circuit.h
+
+1580503448 source:/home/blewis/git/Asembler/S&P Circuits/main.cpp
+	<iostream>
+	"Circuit.h"
+
+1580503720 /home/blewis/git/Asembler/S&P Circuits/include/Circuit.h
+
+1580503730 source:/home/blewis/git/Asembler/S&P Circuits/src/Circuit.cpp
+	"Circuit.h"
+
