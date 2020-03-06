@@ -20,11 +20,11 @@ int main()
 
 
 
-/*    for (int x = num1; x<= num2; x++)
+    for (int x = num1; x<= num2; x++)
     {
         total += x;
     }
-*/
+
     printf("The sum of the integers from %i to %i = %i", num1, num2, total);
     return 0;
 
