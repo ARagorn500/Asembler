@@ -1,11 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void CalculateVoltage(double* Voltage, double Amperage, double Resistance)
+    {
+        *Voltage = Amperage * Resistance;
+    }
+
+void CalculateAmperage(double Voltage, double* Amperage, double Resistance)
+    {
+         *Amperage = Voltage / Resistance;
+    }
+
+void CalculateResistance(double Voltage, double Amperage, double* Resistance)
+    {
+        *Resistance = Voltage / Amperage;
+    }
+
 int main()
 {
-    double Voltage;
-    double Resistance;
-    double Amperage;
+    double Voltage = 0;
+    double Resistance = 0;
+    double Amperage = 0;
     int UserChoice;
 
     printf("What would you like to calculate 1) Voltage, 2) Amperage, or 3) Resistance:\n");
@@ -20,7 +35,7 @@ int main()
         scanf("%lf", &Resistance);
 
         //finish calculations.
-        Voltage = Amperage * Resistance;
+        CalculateVoltage(&Voltage, Amperage, Resistance);
         printf("The Voltage is: %lf", Voltage);
 
     } else if (UserChoice == 2) {
@@ -31,7 +46,7 @@ int main()
         scanf("%lf", &Resistance);
 
         //finish calculation
-        Amperage = Voltage / Resistance;
+        CalculateAmperage(Voltage, &Amperage, Resistance);
         printf("The Amperage is: %lf", Amperage);
 
     } else if (UserChoice == 3) {
@@ -42,11 +57,12 @@ int main()
         scanf("%lf", &Amperage);
 
         //finish calculation
-        Resistance = Voltage / Amperage;
+        CalculateResistance(Voltage, Amperage, &Resistance);
         printf("The Resistance is: %lf", Resistance);
 
     } else {
         printf("Please enter '1', '2', or '3'.");
+
     }
     return 0;
 }
